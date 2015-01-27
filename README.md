@@ -1,3 +1,10 @@
+TLC Changes
+______
+* 55187 SBA-3149
+* 55098 SBA-3212, SBA-3175
+* 50524 SBA-1938, SBA-1939
+* 48852 SBA-1262 unable-to-open-patient-in-vpdoc, SBA-993 on-duty-lists-sync
+
 iOS-Slide-Menu
 ---------
 iOS Slide Menu built on top of UINavigationController, with configurable buttons, reveal animations, and tap/swiper gesture recognizers.
