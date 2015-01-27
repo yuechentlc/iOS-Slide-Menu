@@ -148,6 +148,7 @@ static SlideNavigationController *singletonInstance;
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
     self.menuNeedsLayout = YES;
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -849,20 +850,6 @@ static SlideNavigationController *singletonInstance;
 	[self.menuRevealAnimator clear];
 	
 	_menuRevealAnimator = menuRevealAnimator;
-}
-
-- (void)setLeftMenu:(UIViewController *)leftMenu
-{
-    [_leftMenu.view removeFromSuperview];
-    
-    _leftMenu = leftMenu;
-}
-
-- (void)setRightMenu:(UIViewController *)rightMenu
-{
-    [_rightMenu.view removeFromSuperview];
-    
-    _rightMenu = rightMenu;
 }
 
 @end
