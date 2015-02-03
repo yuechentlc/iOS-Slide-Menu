@@ -36,6 +36,10 @@
 - (BOOL)slideNavigationControllerShouldDisplayLeftMenu;
 @end
 
+@protocol PopGestureRecognizerSupportProtocol <NSObject>
+- (BOOL) allowPopGestureToPreviousViewController;
+@end
+
 typedef  enum{
 	MenuLeft = 1,
 	MenuRight = 2
