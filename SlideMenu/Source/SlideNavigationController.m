@@ -425,8 +425,12 @@ static SlideNavigationController *singletonInstance;
 {
     if ([self isMenuOpen])
         [self closeMenuWithCompletion:completion];
-    else
+    else{
         [self openMenu:menu withCompletion:completion];
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
+            self.menuNeedsLayout = YES;
+        }
+    }
 }
 
 - (UIBarButtonItem *)barButtonItemForMenu:(Menu)menu
